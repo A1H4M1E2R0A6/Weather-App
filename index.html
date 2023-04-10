@@ -28,8 +28,15 @@
                 </form>
               </header>            
     
-
-    
+              <div class="weather-icon"> 
+                <background img src="Weather background.png" alt="background img" width="40rem"></div>
+              <div class="weather-box">
+                <ul>
+                <li id="location">City, Country</li>
+                <li class="date">Date</li>
+                <li id="feels">Feels Like:</li>
+            </ul> 
+            </div>
     <div id="result">
 
     </div>
@@ -47,7 +54,9 @@
                 .then(function (response) {
                     // handle success
                     console.log(response.data);
-                    document.querySelector("#result").innerHTML = `Temprature of ${response.data.name} is ${response.data.main.temp}°C`
+                    document.querySelector("#result").innerHTML = ` ${response.data.main.temp}°C`
+                    document.querySelector('#feels').innerHTML =` feels ${response.data.main.feels_like}°C`;
+                    document.querySelector("#location").innerHTML = `${response.data.name} , ${response.data.sys.country}`
                 })
                 .catch(function (error) {
                     // handle error
