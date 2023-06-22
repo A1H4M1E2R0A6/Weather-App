@@ -44,10 +44,14 @@ label{
 img{
   padding-left: 7rem;
 }
+
 div>ul>li{
   list-style: none;
 }
-
+#collecter{
+  border-color:solid black 0.2rem ;
+  border-radius: 1rem;
+}
 #result{
   font-size: larger;
   font-weight: bold;
